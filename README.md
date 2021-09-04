@@ -1,3 +1,41 @@
+
+# github-search-app
+
+Web application, which lists the repositories and organizations by search term.
+
+ [gh-pages] (https://evgeniy241984.github.io/??????/)
+ [code] (https://github.com/Evgeniy241984/github-search-app)
+
+## Framework features:
+
+Used API: [GitHub API] (api.github.com) to get data.
+
+## Project source code structure
+
+/src -- project source code
+├── components -- app UI components
+│ ├── App.js -- root app component
+│ ├──
+├── data -- app data
+│ ├──
+├── framework -- app UI handling methods
+│ └── render.js -- UI rendering methods
+├── index.html -- app web presentation root document
+├── index.js -- bootstrapping code and app entry point
+└── utils.js -- shared utility methods and constants
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
