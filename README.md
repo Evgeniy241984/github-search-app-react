@@ -1,4 +1,3 @@
-
 # github-search-app
 
 Web application, which lists the repositories and organizations by search term.
@@ -14,26 +13,18 @@ Used API: [GitHub API] (api.github.com) to get data.
 
 /src -- project source code
 ├── components -- app UI components
-│ ├── App.js -- root app component
-│ ├──
+│ ├── 
+│ ├── 
 ├── data -- app data
 │ ├──
-├── framework -- app UI handling methods
-│ └── render.js -- UI rendering methods
+├── pages -- app pages
+│ ├──
+├── redux -- redux components
+│ ├──
+├── App.js -- root component
 ├── index.html -- app web presentation root document
 ├── index.js -- bootstrapping code and app entry point
 └── utils.js -- shared utility methods and constants
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Getting Started with Create React App
