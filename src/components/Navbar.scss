@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__link-section {
+        display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    }
+
+    &__logo {
+        width: 200px;
+    }
+}
