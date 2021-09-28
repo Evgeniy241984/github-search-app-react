@@ -2,8 +2,9 @@
 
 Web application, which lists the repositories and organizations by search term.
 
- [gh-pages](https://evgeniy241984.github.io/github-search-app/)
- [code](https://github.com/Evgeniy241984/github-search-app)
+ [gh-pages](https://evgeniy241984.github.io/github-search-app/) 
+ 
+ [code](https://github.com/Evgeniy241984/github-search-app) 
 
 ## Framework features:
 
