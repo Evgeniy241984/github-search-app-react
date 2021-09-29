@@ -14,15 +14,20 @@ export const SearchForm = () => {
     const repositories = useSelector((state) => state.allGitHubRepos.repositories);
     const dispatch = useDispatch();
 
-    const debouncedValue = useDebounce( searchPhrase, 500);
+    console.log("Start SearchFrom")
+
+    const debouncedValue = useDebounce( searchPhrase, 5000);
     
     const getResponse = async param => {
       const result = await fetchRepositories(param);  
       dispatch(setRepositories(result.items));
+      console.log("GetResponse result -> " + result.items)
     }
 
     useEffect(() => {
+      console.log("UseEffect function started")
         if (debouncedValue) {
+          console.log("useEffect -> getREsponse started")
           getResponse(debouncedValue);
         }  
       },[debouncedValue]
@@ -34,7 +39,8 @@ export const SearchForm = () => {
       setSearchPhrase(value) 
     }
 
-    console.log(repositories);
+    console.log("SearchForm End");
+    console.log(repositories)
 
     return (
       <>
