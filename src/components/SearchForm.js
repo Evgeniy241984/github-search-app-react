@@ -10,37 +10,31 @@ import { Results } from './Results';
 
 export const SearchForm = () => {
     const [searchPhrase, setSearchPhrase] = useState('');
-   /*  const [repositories, setRepositories] = useState(''); */
     const [isSearching, setIsSearching] = useState(false);
     const repositories = useSelector((state) => state.allGitHubRepos.repositories);
     const dispatch = useDispatch();
 
-    const debouncedGetResponse = useCallback(
-      useDebounce( 
-      value => fetchRepositories(value), 500),
-      []
-    );
-
+    const debouncedValue = useDebounce( searchPhrase, 500);
+    
     const getResponse = async param => {
-      const result = await fetchRepositories(param);
-      
-      if (result) {
-        setRepositories(result.items)
-        console.log(result.items)
-      }
+      const result = await fetchRepositories(param);  
+      dispatch(setRepositories(result.items));
     }
 
-    useEffect(() => {  
-        getResponse('');
-      },[]
+    useEffect(() => {
+        if (debouncedValue) {
+          getResponse(debouncedValue);
+        }  
+      },[debouncedValue]
     );
 
     const handleInputChange = (event) => {
       const value = event.target.value;
 
-      dispatch(setSearchPhrase(value))
-      debouncedGetResponse(value);     
+      setSearchPhrase(value) 
     }
+
+    console.log(repositories);
 
     return (
       <>

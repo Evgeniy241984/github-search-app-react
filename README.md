@@ -2,8 +2,8 @@
 
 Web application, which lists the repositories and organizations by search term.
 
- [gh-pages](https://evgeniy241984.github.io/github-search-app/) 
- 
+ [gh-pages](https://evgeniy241984.github.io/github-search-app-react/) 
+
  [code](https://github.com/Evgeniy241984/github-search-app) 
 
 ## Framework features:
@@ -13,6 +13,7 @@ Used API: [GitHub API] (api.github.com) to get data.
 ## Project source code structure
 
 /src -- project source code
+
 ├── components -- app UI components
 │ ├── 
 │ ├── 
@@ -26,7 +27,6 @@ Used API: [GitHub API] (api.github.com) to get data.
 ├── index.html -- app web presentation root document
 ├── index.js -- bootstrapping code and app entry point
 └── utils.js -- shared utility methods and constants
-
 
 # Getting Started with Create React App
 
