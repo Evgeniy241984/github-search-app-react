@@ -1,3 +1,4 @@
 export const ActionTypes = {
     SET_REPOSITORIES: "SET_REPOSITORIES",
+    SET_IS_FETCHING: "SET_IS_FETCHING",
 }

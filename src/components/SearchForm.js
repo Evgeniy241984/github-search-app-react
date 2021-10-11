@@ -1,36 +1,30 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadOrgData } from '../data/gitHubAPI';
 import fetchRepositories from '../data/gitHubAPI';
 import { useDebounce } from '../customHooks';
-import {setRepositories} from '../redux/actions/reposAction';
-import { Results } from './Results';
-
+import {setIsFetching, setRepositories} from '../redux/actions/reposAction';
+import { SearchResult } from './SearchResult';
 
 
 export const SearchForm = () => {
     const [searchPhrase, setSearchPhrase] = useState('');
-    const [isSearching, setIsSearching] = useState(false);
-    const repositories = useSelector((state) => state.allGitHubRepos.repositories);
+    const isFetching = useSelector(state => state.allGitHubRepos.isFetching); 
     const dispatch = useDispatch();
 
-    console.log("Start SearchFrom")
-
-    const debouncedValue = useDebounce( searchPhrase, 5000);
+    const debouncedValue = useDebounce( searchPhrase, 500);
     
-    const getResponse = async param => {
-      const result = await fetchRepositories(param);  
-      dispatch(setRepositories(result.items));
-      console.log("GetResponse result -> " + result.items)
-    }
-
     useEffect(() => {
-      console.log("UseEffect function started")
+
+      const getResponse = async param => {
+        dispatch(setIsFetching(true));
+        const result = await fetchRepositories(param);
+        dispatch(setRepositories(result.items));
+      }
+      
         if (debouncedValue) {
-          console.log("useEffect -> getREsponse started")
           getResponse(debouncedValue);
         }  
-      },[debouncedValue]
+      },[dispatch, debouncedValue]
     );
 
     const handleInputChange = (event) => {
@@ -39,13 +33,9 @@ export const SearchForm = () => {
       setSearchPhrase(value) 
     }
 
-    console.log("SearchForm End");
-    console.log(repositories)
-
     return (
       <>
           <form className="search-form"> 
-              <div className="search-form__group">
                   <input 
                       type="text"
                       className="search-form__input"
@@ -53,12 +43,16 @@ export const SearchForm = () => {
                       value={searchPhrase}
                       onChange={handleInputChange}
                   />
-              </div>
-              <div>
-                {isSearching && <div>Searching ...</div>}
-              </div>
-          </form>  
+          </form>
+          <div>
+          {isFetching === true
+              ? 
+                <div className="search-form__fetching">Searching...</div>
+              :
+                <SearchResult />
+            }
           
+          </div>
       </>         
     )
 }

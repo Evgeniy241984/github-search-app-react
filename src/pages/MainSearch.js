@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchForm } from '../components/SearchForm';
 
-export const Home = (organization, repositories) => {
+export const MainSearch = () => {
 
     return (
         <>

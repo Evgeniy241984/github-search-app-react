@@ -6,3 +6,10 @@
         payload: repositories,
      }
  };
+
+ export const setIsFetching = (bool) => {
+     return {
+         type: ActionTypes.SET_IS_FETCHING,
+         payload: bool,
+     }
+};

@@ -1,7 +1,6 @@
 import {combineReducers} from 'redux';
 import {createStore} from 'redux';
 import {reposReducer} from './reposReducer';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 const rootReducer = combineReducers({
     allGitHubRepos: reposReducer,

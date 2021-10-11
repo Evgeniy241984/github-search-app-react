@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import './Navbar.scss'
+import './Navbar.scss';
 import logo from '../logo.jpg';
 
 export const Navbar = () => (
@@ -10,12 +10,12 @@ export const Navbar = () => (
         </div>
         <ul className="navigation__link-section">
             <li>
-                <NavLink 
+            <NavLink 
                     className=""
                     to="/"
                 >
                     Home
-                </NavLink>
+            </NavLink>
             </li>
             <li>
             <NavLink 
@@ -23,7 +23,7 @@ export const Navbar = () => (
                     to="/about"
                 >
                     About
-                </NavLink>
+            </NavLink>
             </li>
         </ul>
 
