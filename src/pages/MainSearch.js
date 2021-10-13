@@ -5,9 +5,7 @@ export const MainSearch = () => {
 
     return (
         <>
-            <div>    
-                <SearchForm />
-            </div> 
+            <SearchForm />
         </>
         
     )

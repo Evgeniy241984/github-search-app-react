@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import {Navbar} from './components/Navbar';
+import {Header} from './components/Header';
 import {SplashScreen} from './pages/SplashScreen';
 import {About} from './pages/About';
 import {MainSearch} from './pages/MainSearch';
@@ -12,12 +12,14 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navbar/>
+        <Header/>
+        <div className="page__container">
           <Switch>
-            <Route path={'/'} exact component = {SplashScreen} />
+            <Route path={'/github-search-app-react/'} exact component = {SplashScreen} />
             <Route path={'/about'} exact component = {About} />
             <Route path={'/main-search'} exact component = {MainSearch} />
           </Switch>
+        </div> 
       </BrowserRouter>
     </Provider>
   );

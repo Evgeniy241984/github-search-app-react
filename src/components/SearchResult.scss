@@ -1,4 +1,95 @@
-.search-result__item {
-    display: flex;
-    flex-direction: row;
+.search-result {
+
+    margin: 0 16px;
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
 }
+
+
+.search-item {
+    &__icon {
+        align-self: flex-start;
+        padding-top: 2px;
+    }
+
+    &__icon_repo {
+        
+        width: 16px;
+        height: 16px; 
+        margin-right: 8px;
+     }
+
+     &__description {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+
+     }
+ 
+     &__repo-name {
+         font-weight: 400;
+     }
+ 
+     &__owner {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         padding: 7px 0 5px 5px;
+     }
+ 
+     &__owner_img {
+         width: 20px;
+         height: 20px;
+         margin-right: 8px;
+     }
+
+     &__topicList {
+        padding: 5px;
+     }
+
+     &__topic {
+        display: inline-block;
+        padding: 0 7px;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 2em;
+        line-height: 22px;
+        background-color: rgb(221, 244, 255);
+     }
+
+     &__meta {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+     }
+
+}
+
+.meta {
+    &__stargazers {
+    font-size: 12px;
+    margin-right: 16px;
+    }
+
+    &__stargazers_icon {
+        margin-right: 5px;
+    }
+    
+    &__license {
+        font-size: 12px;
+        margin-right: 16px;
+    }
+
+    &__last-update {
+        font-size: 12px;
+    }
+}
+

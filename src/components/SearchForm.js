@@ -4,6 +4,7 @@ import fetchRepositories from '../data/gitHubAPI';
 import { useDebounce } from '../customHooks';
 import {setIsFetching, setRepositories} from '../redux/actions/reposAction';
 import { SearchResult } from './SearchResult';
+import './SearchForm.scss'
 
 
 export const SearchForm = () => {
@@ -35,24 +36,26 @@ export const SearchForm = () => {
 
     return (
       <>
-          <form className="search-form"> 
-                  <input 
-                      type="text"
-                      className="search-form__input"
-                      placeholder="GitHub organizations"
-                      value={searchPhrase}
-                      onChange={handleInputChange}
-                  />
-          </form>
-          <div>
+        <div className="main-search">
+            <form className="search-form"> 
+                    <input 
+                        type="text"
+                        className="search-form__input"
+                        placeholder="Search repositories"
+                        value={searchPhrase}
+                        onChange={handleInputChange}
+                    />
+            </form>
+        </div> 
+        <div className="search-result">
           {isFetching === true
               ? 
                 <div className="search-form__fetching">Searching...</div>
               :
                 <SearchResult />
             }
-          
-          </div>
-      </>         
+        
+      </div> 
+    </>       
     )
 }

@@ -1,0 +1,40 @@
+.splashscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px;
+
+    &_button {
+        padding: 15px 26px;
+        margin-top: 32px;
+        line-height: 20px;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid;
+        border-radius: 6px;
+        
+        color: #24292F;
+        background-color: #F6F8FA;
+        border-color: #EAEEF1;
+        box-shadow: #D8DEE4;
+        
+        font-size: 18px;
+        font-weight: 600;
+
+        cursor: pointer;
+        appearance: none;
+        user-select: none;
+
+        transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+        transition-property: color,background-color,border-color;
+    }
+
+    &_button:hover {
+        background-color: #EAEEF1;
+    }
+}
+
+.splashscreen h3 {
+    margin-top: 16px;
+}

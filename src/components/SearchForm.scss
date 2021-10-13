@@ -1,4 +1,19 @@
-.search-form {
+.main-search {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
 }
+
+.search-form {
+    padding: 1px;
+    min-height: 28px;
+    max-width: 272px;
+    
+    &__input {
+        font-weight: 400;
+        padding: 5px 12px;
+    }
+
+}   

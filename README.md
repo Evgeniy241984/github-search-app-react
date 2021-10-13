@@ -1,20 +1,21 @@
 # github-search-app
 
-Web application, which lists the repositories and organizations by search term.
+Web application, which lists GitHub repositories by search term.
 
  [gh-pages](https://evgeniy241984.github.io/github-search-app-react/) 
 
  [code](https://github.com/Evgeniy241984/github-search-app) 
 
-## Framework features:
-
-Used API: [GitHub API](api.github.com) to get data.
-
-## Project source code structure
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features: 
+            
+### The project was developed as a single page application on React
+              
+### Has Redux State management
+               
+### Used SCSS and responsive styles
+              
+### Search has debounce input 500 ms
+ 
 
 ## Available Scripts
 

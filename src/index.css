@@ -15,6 +15,7 @@ a {
 
 body {
   margin: 0;
+  font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -33,3 +34,9 @@ code {
   justify-content: center;
 }
 
+
+.page__container {
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+}
