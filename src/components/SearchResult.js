@@ -7,7 +7,7 @@ import './SearchResult.scss';
 
 export const SearchResult = () => {
     const repositories = useSelector((state) => state.allGitHubRepos.repositories);
-    console.log(repositories);
+    
     const repositoriesList = repositories.map((repo) => {
         const {id, html_url, full_name, owner, topics, watchers, license, pushed_at} = repo;
 
