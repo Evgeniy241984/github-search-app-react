@@ -1,11 +1,13 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
+import store from './redux/reducers/index';
 import {Header} from './components/Header';
 import {SplashScreen} from './pages/SplashScreen';
 import {About} from './pages/About';
 import {MainSearch} from './pages/MainSearch';
-import store from './redux/reducers/index';
+import './App.scss';
+
 
 function App() {
 

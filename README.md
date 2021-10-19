@@ -13,9 +13,15 @@ Web application, which lists GitHub repositories by search term.
 ### Has Redux State management
                
 ### Used SCSS and responsive styles
+    (TODO: @mixins, variables, responsive design)
               
 ### Search has debounce input 500 ms
- 
+
+### TODO:  
+ Previous requests are shown in the history module
+ History should be available after reloading the page or mobile application 
+    (will implement using Local Storage)
+
 
 ## Available Scripts
 

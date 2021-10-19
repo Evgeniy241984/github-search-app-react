@@ -1,3 +1,5 @@
+@import-normalize;
+
 * {
   box-sizing: border-box;
       margin: 0;
@@ -5,7 +7,7 @@
   
 }
 
-ol, ul {
+ul {
 	list-style: none;
 }
 
@@ -28,15 +30,3 @@ code {
     monospace;
 }
 
-
-.App {
-  display: flex;
-  justify-content: center;
-}
-
-
-.page__container {
-  max-width: 1012px;
-  margin-right: auto;
-  margin-left: auto;
-}

@@ -13,3 +13,10 @@
          payload: bool,
      }
 };
+
+export const setNothingWasFound = (bool) => {
+    return {
+        type: ActionTypes.SET_NOTHING_WAS_FOUND,
+        payload: bool,
+    }
+}

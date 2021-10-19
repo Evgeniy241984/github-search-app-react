@@ -4,12 +4,12 @@ import './SplashScreen.scss';
 
 export const SplashScreen = () => (
     <div className="splashscreen">
-        <h2>
+        <h1 className="splashscreen_title">
             Hello, Friend! 
-        </h2>
-        <h3>
+        </h1>
+        <h2 className="splashscreen_subtitle">
         Click the button to start searching for GitHub repositories.
-        </h3>
+        </h2>
         <NavLink 
                     className="splashscreen_button"
                     to="/main-search"

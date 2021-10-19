@@ -7,7 +7,7 @@ export const Header = () => (
     <div className="header">
         <div className="header__logo">
             <NavLink 
-                    className="navbar__link"
+                    className=""
                     to="/github-search-app-react"
                 >
                 <VscGithub className="header__logo_main" />
@@ -16,6 +16,14 @@ export const Header = () => (
        
         <nav className="navbar"> 
             <ul className="navbar__list">
+                <li>
+                <NavLink 
+                        className="navbar__link"
+                        to="/main-search"
+                    >
+                        Search
+                </NavLink>
+                </li>
                 <li>
                 <NavLink 
                         className="navbar__link"

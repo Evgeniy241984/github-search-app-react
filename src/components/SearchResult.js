@@ -9,6 +9,7 @@ export const SearchResult = () => {
     const repositories = useSelector((state) => state.allGitHubRepos.repositories);
     
     const repositoriesList = repositories.map((repo) => {
+        
         const {id, html_url, full_name, owner, topics, watchers, license, pushed_at} = repo;
 
         const updateTime = getDateTimeFromUTC(pushed_at);
@@ -16,7 +17,7 @@ export const SearchResult = () => {
         const topicsList = topics.map((topic, key) => {
 
             return (
-                <a key={key} href={`https://github.com/topics/${topic}`} className="search-item__topic">{topic}</a>
+                <a key={key} className="search-item__topic" href={`https://github.com/topics/${topic}`} rel="nofollow noopener noreferrer" target="_blank">{topic}</a>
             )
         })
 
@@ -27,12 +28,12 @@ export const SearchResult = () => {
                     </div>
                     <div className="search-item__description">
                         <div >
-                            <a className="search-item__repo-name" href={html_url}>{full_name}</a>   
+                            <a className="search-item__repo-name" href={html_url} rel="nofollow noopener noreferrer" target="_blank">{full_name}</a>   
                         </div>
 
                         <p className="search-item__owner">
-                            <img className="search-item__owner_img" src={owner.avatar_url} alt={owner.login} />
-                            <strong>{owner.login}</strong> 
+                            <img className="owner__image" src={owner.avatar_url} alt={owner.login} />
+                            <a className="owner__url" href={owner.html_url} rel="nofollow noopener noreferrer" target="_blank">{owner.login} </a>
                         </p>
                         <div className="search-item__topicList">
                             {topicsList}
@@ -59,10 +60,10 @@ export const SearchResult = () => {
             </li>           
         )
     })
-
+    
     return (
-        <ul> 
-            {repositoriesList}
+        <ul>
+            {repositoriesList} 
         </ul>  
     )
 

@@ -1,0 +1,16 @@
+@import './assets/mixins.scss';
+@import './assets/breakpoints.scss';
+
+  
+.page__container {
+    @include marginAutoRL;
+
+    @include desktop {
+        max-width: $screen-desktop-min;
+    }
+
+    @include laptop {
+        max-width: $screen-laptop-min;
+    } 
+}
+  

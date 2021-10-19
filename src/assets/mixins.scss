@@ -1,0 +1,68 @@
+@import './breakpoints.scss';
+
+// Devices
+@mixin mobile {
+    @media (min-width: $screen-mobile-min) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media (min-width: $screen-ipad-min) {
+        @content;
+    }
+}
+
+@mixin smallScreen {
+    @media (min-width: $screen-sm-min) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: $screen-laptop-min) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $screen-desktop-min) {
+        @content;
+    }
+}
+
+@mixin extraLarge {
+    @media (min-width: $screen-xl-min) {
+        @content;
+    }
+}
+
+//Layouts
+@mixin flexRawCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+//Margin Right Left auto
+@mixin marginAutoRL {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin stickyHeader {
+    position: sticky;
+    top: 0;
+}
+
+@mixin staticByDefault {
+    position: static;
+}

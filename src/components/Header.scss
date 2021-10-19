@@ -1,29 +1,36 @@
+@import '../assets/mixins.scss';
+@import '../assets/breakpoints.scss';
+
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 16px 32px;
-
-    background-color: #24292F;
-
-    font-size: 14px;
     font-weight: 600;
     line-height: 1.5;   
+    background-color: #24292F;
+    z-index: 100;
 
     &__logo {
         display: flex;
+        margin-right: 16px;
     }
 
     &__logo_main {
         width: 32px;
         height: 32px;
-        margin-right: 16px;
         fill: #F6F8FA;
     }
 
     &__logo_main:hover {
         fill: #0969DA;
+    }
+
+    @include flexRawCenter;
+
+    @include mobile {
+        @include stickyHeader;
+    }
+
+    @include ipad {
+        @include staticByDefault;
     }
 
 }
@@ -40,7 +47,6 @@
     &__link {
         color: #FFFF;
         margin-right: 16px;
-        
     }
 
     &__link:hover {
